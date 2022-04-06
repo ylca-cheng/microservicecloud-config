@@ -7,10 +7,25 @@ spring:
   profiles: dev
   pplication:
     name: microservicecloud-config-client-dev
-
+  
+eureka:
+  client:
+    register-with-eureka: false
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/  
+server:
+  port: 8885
 ---
 spring:
   profiles: test
   pplication:
     name: microservicecloud-config-client-test
+    
+eureka:
+  client:
+    register-with-eureka: false
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ 
 
+server:
+  port: 8886
